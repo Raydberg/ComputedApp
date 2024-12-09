@@ -4,141 +4,300 @@
       "id": 1,
       "name": "Laptop",
       "price": 1200,
-      "description": "A high-performance laptop",
-      "stock": 10
+      "description": "A high-performance laptop with a sleek design, ideal for professionals and gamers.",
+      "stock": 10,
+      "category": [
+        "Electronics",
+        "Computers"
+      ],
+      "image": "https://plus.unsplash.com/premium_photo-1711051475117-f3a4d3ff6778?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "user": "JohnDoe",
+          "comment": "Amazing performance and great battery life!",
+          "rating": 5
+        },
+        {
+          "user": "JaneSmith",
+          "comment": "Sleek design but slightly expensive.",
+          "rating": 4
+        }
+      ],
+      "dimensions": {
+        "weight": "1.5 kg",
+        "width": "35 cm",
+        "height": "2 cm",
+        "depth": "24 cm"
+      },
+      "manufacturer": {
+        "name": "TechCorp",
+        "model": "ProBook 15X",
+        "releaseDate": "2023-05-10"
+      },
+      "discount": {
+        "isOnSale": true,
+        "salePrice": 1100,
+        "saleEndDate": "2024-12-31"
+      }
     },
     {
       "id": 2,
       "name": "Smartphone",
       "price": 800,
-      "description": "Latest model smartphone",
-      "stock": 25
+      "description": "Latest model smartphone with a stunning display and powerful performance.",
+      "stock": 25,
+      "category": [
+        "Electronics",
+        "Mobile Phones"
+      ],
+      "image": "https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "user": "AlexG",
+          "comment": "The camera is amazing, but battery life could be better.",
+          "rating": 4
+        },
+        {
+          "user": "ChrisP",
+          "comment": "Great value for money, very fast and reliable.",
+          "rating": 5
+        }
+      ],
+      "dimensions": {
+        "weight": "180 g",
+        "width": "7 cm",
+        "height": "15 cm",
+        "depth": "0.8 cm"
+      },
+      "manufacturer": {
+        "name": "SmartTech",
+        "model": "XPhone Ultra",
+        "releaseDate": "2024-02-15"
+      },
+      "discount": null
     },
     {
       "id": 3,
       "name": "Tablet",
       "price": 500,
-      "description": "Lightweight and portable tablet",
-      "stock": 15
+      "description": "Lightweight and portable tablet with a high-resolution display.",
+      "stock": 15,
+      "category": [
+        "Electronics",
+        "Tablets"
+      ],
+      "image": "https://plus.unsplash.com/premium_photo-1680371834674-8eccade9b271?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "user": "TabletFan",
+          "comment": "Perfect for reading and streaming!",
+          "rating": 5
+        }
+      ],
+      "dimensions": {
+        "weight": "600 g",
+        "width": "20 cm",
+        "height": "0.7 cm",
+        "depth": "13 cm"
+      },
+      "manufacturer": {
+        "name": "TabCorp",
+        "model": "SlimTab 10",
+        "releaseDate": "2022-09-20"
+      },
+      "discount": {
+        "isOnSale": true,
+        "salePrice": 450,
+        "saleEndDate": "2024-11-15"
+      }
     },
     {
       "id": 4,
       "name": "Smartwatch",
       "price": 300,
-      "description": "Wearable device with fitness tracking",
-      "stock": 20
+      "description": "Wearable device with fitness tracking and heart rate monitoring.",
+      "stock": 20,
+      "category": [
+        "Wearables",
+        "Fitness"
+      ],
+      "image": "https://plus.unsplash.com/premium_photo-1712999654688-81086e494bf1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "ActiveLife",
+          "comment": "A must-have for tracking workouts!",
+          "rating": 5
+        }
+      ],
+      "dimensions": {
+        "weight": "50 g",
+        "width": "4 cm",
+        "height": "1 cm",
+        "depth": "4 cm"
+      },
+      "manufacturer": {
+        "name": "WearTech",
+        "model": "FitPro 3",
+        "releaseDate": "2023-01-05"
+      },
+      "discount": null
     },
     {
       "id": 5,
       "name": "Headphones",
       "price": 150,
-      "description": "Noise-cancelling headphones",
-      "stock": 50
+      "description": "Noise-cancelling headphones with exceptional sound quality.",
+      "stock": 50,
+      "category": [
+        "Audio",
+        "Accessories"
+      ],
+      "image": "https://plus.unsplash.com/premium_photo-1679513691485-711d030f7e94?q=80&w=1413&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "MusicLover",
+          "comment": "The sound is crystal clear!",
+          "rating": 5
+        },
+        {
+          "user": "NoiseHater",
+          "comment": "Great noise cancellation, but a bit tight on the ears.",
+          "rating": 4
+        }
+      ],
+      "dimensions": {
+        "weight": "300 g",
+        "width": "15 cm",
+        "height": "20 cm",
+        "depth": "5 cm"
+      },
+      "manufacturer": {
+        "name": "SoundCorp",
+        "model": "QuietTune X",
+        "releaseDate": "2023-07-15"
+      },
+      "discount": {
+        "isOnSale": true,
+        "salePrice": 120,
+        "saleEndDate": "2024-10-10"
+      }
     },
     {
       "id": 6,
       "name": "Gaming Console",
       "price": 400,
-      "description": "Next-gen gaming console",
-      "stock": 8
+      "description": "Next-gen gaming console with immersive graphics and exclusive titles.",
+      "stock": 8,
+      "category": [
+        "Gaming",
+        "Electronics"
+      ],
+      "image": "https://images.unsplash.com/photo-1513599898445-1c34777500ab?q=80&w=1467&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 4.9,
+      "reviews": [
+        {
+          "user": "ProGamer",
+          "comment": "Best gaming experience ever!",
+          "rating": 5
+        }
+      ],
+      "dimensions": {
+        "weight": "4 kg",
+        "width": "30 cm",
+        "height": "10 cm",
+        "depth": "25 cm"
+      },
+      "manufacturer": {
+        "name": "GameTech",
+        "model": "PlayX 5",
+        "releaseDate": "2022-11-20"
+      },
+      "discount": null
     },
     {
       "id": 7,
       "name": "Monitor",
       "price": 250,
-      "description": "27-inch 4K UHD monitor",
-      "stock": 12
+      "description": "27-inch 4K UHD monitor with vibrant colors and high refresh rate.",
+      "stock": 12,
+      "category": [
+        "Electronics",
+        "Peripherals"
+      ],
+      "image": "https://plus.unsplash.com/premium_photo-1680721575441-18d5a0567269?q=80&w=1404&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 4.8,
+      "reviews": [],
+      "dimensions": {
+        "weight": "3.5 kg",
+        "width": "60 cm",
+        "height": "35 cm",
+        "depth": "5 cm"
+      },
+      "manufacturer": {
+        "name": "ViewTech",
+        "model": "UltraView 27",
+        "releaseDate": "2023-04-10"
+      },
+      "discount": {
+        "isOnSale": false
+      }
     },
     {
       "id": 8,
       "name": "Keyboard",
       "price": 80,
-      "description": "Mechanical RGB keyboard",
-      "stock": 35
+      "description": "Mechanical RGB keyboard with customizable lighting.",
+      "stock": 35,
+      "category": [
+        "Accessories",
+        "Gaming"
+      ],
+      "image": "https://plus.unsplash.com/premium_photo-1683543124615-fb42e42c6201?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 4.3,
+      "reviews": [],
+      "dimensions": {
+        "weight": "1 kg",
+        "width": "45 cm",
+        "height": "5 cm",
+        "depth": "15 cm"
+      },
+      "manufacturer": {
+        "name": "KeyWorld",
+        "model": "LightKeys Pro",
+        "releaseDate": "2023-07-01"
+      },
+      "discount": null
     },
     {
       "id": 9,
       "name": "Mouse",
       "price": 50,
-      "description": "Wireless ergonomic mouse",
-      "stock": 40
-    },
-    {
-      "id": 10,
-      "name": "Router",
-      "price": 100,
-      "description": "High-speed Wi-Fi router",
-      "stock": 18
-    },
-    {
-      "id": 11,
-      "name": "External Hard Drive",
-      "price": 120,
-      "description": "1TB external storage drive",
-      "stock": 22
-    },
-    {
-      "id": 12,
-      "name": "Printer",
-      "price": 200,
-      "description": "All-in-one color printer",
-      "stock": 10
-    },
-    {
-      "id": 13,
-      "name": "Webcam",
-      "price": 90,
-      "description": "1080p HD webcam",
-      "stock": 25
-    },
-    {
-      "id": 14,
-      "name": "Portable Charger",
-      "price": 30,
-      "description": "10,000mAh power bank",
-      "stock": 60
-    },
-    {
-      "id": 15,
-      "name": "Speakers",
-      "price": 180,
-      "description": "Bluetooth surround speakers",
-      "stock": 15
-    },
-    {
-      "id": 16,
-      "name": "Graphics Card",
-      "price": 700,
-      "description": "High-end gaming GPU",
-      "stock": 5
-    },
-    {
-      "id": 17,
-      "name": "RAM",
-      "price": 90,
-      "description": "16GB DDR4 RAM",
-      "stock": 30
-    },
-    {
-      "id": 18,
-      "name": "SSD",
-      "price": 150,
-      "description": "512GB NVMe SSD",
-      "stock": 25
-    },
-    {
-      "id": 19,
-      "name": "Smart Light Bulb",
-      "price": 20,
-      "description": "Wi-Fi enabled smart bulb",
-      "stock": 50
-    },
-    {
-      "id": 20,
-      "name": "Drone",
-      "price": 900,
-      "description": "High-resolution camera drone",
-      "stock": 7
+      "description": "Wireless ergonomic mouse with precision tracking.",
+      "stock": 40,
+      "category": [
+        "Accessories",
+        "Peripherals"
+      ],
+      "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80&w=1467&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 4.6,
+      "reviews": [],
+      "dimensions": {
+        "weight": "150 g",
+        "width": "7 cm",
+        "height": "3 cm",
+        "depth": "10 cm"
+      },
+      "manufacturer": {
+        "name": "MouseTech",
+        "model": "ErgoPro",
+        "releaseDate": "2022-08-15"
+      },
+      "discount": null
     }
   ]
 }
