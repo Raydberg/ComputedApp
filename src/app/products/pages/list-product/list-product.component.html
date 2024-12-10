@@ -1,14 +1,20 @@
 <div class="p-5 grid">
   <div class="col-12 sm:col-6 lg:col-3 gap-2" *ngFor="let item of products">
-    <p-card [style]="{ height: '480px' }">
-      <div class="flex flex-column h-full">
+    <p-card
+      [style]="{ height: '480px' }"
+      styleClass="transform-none transition-all transition-duration-200 hover:translate-y--5 hover:shadow-8 cursor-pointer"
+    >
+      <div [routerLink]="['/product', item.id]" class="flex flex-column h-full">
         <!-- Imagen -->
-        <div class="relative" style="height: 200px; border: 2px solid #ccc; border-radius: 8px;">
+        <div
+          class="relative"
+          style="height: 200px; border: 2px solid #ccc; border-radius: 8px"
+        >
           <img
-            class="w-full h-full"
+            class="w-full h-full transform-none transition-all transition-duration-300 hover:scale-110"
             [src]="item.image"
             [alt]="item.name"
-            style="object-fit: cover; border-radius: 8px;"
+            style="object-fit: cover; border-radius: 8px"
           />
         </div>
 
@@ -29,15 +35,25 @@
                 class="mt-2 text-right"
                 severity="info"
                 icon="pi pi-dollar"
-                value={{item.price}}
+                value="{{ item.price }}"
               />
             </div>
           </div>
         </div>
       </div>
       <div class="flex justify-content-between mt-auto pt-3">
-        <p-button icon="pi pi-heart" [outlined]="true"></p-button>
-        <p-button icon="pi pi-shopping-cart"></p-button>
+        <p-button
+          (click)="onFavorite(item)"
+          [icon]="item.isFavorite ? 'pi pi-heart-fill' : 'pi pi-heart'"
+          [outlined]="true"
+          styleClass="transform-none transition-all transition-duration-200 hover:scale-105"
+        >
+        </p-button>
+        <p-button
+          icon="pi pi-shopping-cart"
+          styleClass="transform-none transition-all transition-duration-200 hover:scale-105"
+        >
+        </p-button>
       </div>
     </p-card>
   </div>

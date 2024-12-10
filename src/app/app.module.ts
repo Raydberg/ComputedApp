@@ -9,16 +9,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgPrimeModule } from './ng-prime/ng-prime.module';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   imports: [
+    // Angular Core Modules
     BrowserModule,
-    AppRoutingModule,
-    ProductsModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    
+    // Feature Modules
+    AppRoutingModule,
+    ProductsModule,
     NgPrimeModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ListProductComponent } from './pages/list-product/list-product.component';
 import { NewProductComponent } from './pages/new-product/new-product.component';
+import { ProductComponent } from './pages/product/product.component';
+import { FavoriteProductComponent } from './pages/favorite-product/favorite-product.component';
 
 const routes: Routes = [
   {
@@ -19,8 +21,16 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
-       path:'new-product',
-       component:NewProductComponent
+        path: 'new-product',
+        component: NewProductComponent,
+      },
+      {
+        path: 'product/:id',
+        component: ProductComponent,
+      },
+      {
+        path: 'favorite-products',
+        component: FavoriteProductComponent,
       },
       {
         path: '**',

@@ -7,9 +7,21 @@ import { RouterModule } from '@angular/router';
 import { ProductsRoutingModule } from './product-routing.module';
 import { NewProductComponent } from './pages/new-product/new-product.component';
 import { SharedModule } from '../shared/shared.module';
+import { FavoriteProductComponent } from './pages/favorite-product/favorite-product.component';
 
 @NgModule({
-  declarations: [HomeComponent, ListProductComponent,NewProductComponent],
-  imports: [CommonModule, NgPrimeModule, RouterModule, ProductsRoutingModule,SharedModule],
+  declarations: [
+    HomeComponent,
+    ListProductComponent,
+    NewProductComponent,
+    FavoriteProductComponent,
+  ],
+  imports: [
+    CommonModule,
+    NgPrimeModule,
+    RouterModule,
+    ProductsRoutingModule,
+    SharedModule,
+  ],
 })
 export class ProductsModule {}
