@@ -12,6 +12,7 @@ export interface Product {
   manufacturer: Manufacturer;
   discount: Discount | null;
   isFavorite?: boolean;
+  isShopping?: boolean;
 }
 
 export interface Dimensions {

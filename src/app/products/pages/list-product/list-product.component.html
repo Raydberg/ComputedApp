@@ -50,7 +50,9 @@
         >
         </p-button>
         <p-button
+          (click)="onShopping(item)"
           icon="pi pi-shopping-cart"
+          [severity]="item.isShopping ? 'success' : 'primary'"
           styleClass="transform-none transition-all transition-duration-200 hover:scale-105"
         >
         </p-button>

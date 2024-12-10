@@ -5,6 +5,7 @@ import { ListProductComponent } from './pages/list-product/list-product.componen
 import { NewProductComponent } from './pages/new-product/new-product.component';
 import { ProductComponent } from './pages/product/product.component';
 import { FavoriteProductComponent } from './pages/favorite-product/favorite-product.component';
+import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'favorite-products',
         component: FavoriteProductComponent,
+      },
+      {
+        path: 'shopping-cart',
+        component: ShoppingCartComponent,
       },
       {
         path: '**',

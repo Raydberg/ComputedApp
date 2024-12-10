@@ -17,11 +17,11 @@ import { NgPrimeModule } from './ng-prime/ng-prime.module';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    NgPrimeModule,
     
     // Feature Modules
     AppRoutingModule,
     ProductsModule,
-    NgPrimeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

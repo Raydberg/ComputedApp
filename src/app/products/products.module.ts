@@ -8,6 +8,7 @@ import { ProductsRoutingModule } from './product-routing.module';
 import { NewProductComponent } from './pages/new-product/new-product.component';
 import { SharedModule } from '../shared/shared.module';
 import { FavoriteProductComponent } from './pages/favorite-product/favorite-product.component';
+import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FavoriteProductComponent } from './pages/favorite-product/favorite-prod
     ListProductComponent,
     NewProductComponent,
     FavoriteProductComponent,
+    ShoppingCartComponent
   ],
   imports: [
     CommonModule,

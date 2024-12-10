@@ -6,6 +6,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { BadgeModule } from 'primeng/badge';
 import { DataViewModule } from 'primeng/dataview';
 import { TagModule } from 'primeng/tag';
+
 @NgModule({
   exports: [
     CardModule,

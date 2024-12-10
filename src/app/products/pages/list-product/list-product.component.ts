@@ -3,6 +3,8 @@ import { ProductService } from '../../services/product.service';
 import { Product } from '../../interfaces/product.interface';
 import { Router } from '@angular/router';
 import { combineLatest, Subject, takeUntil } from 'rxjs';
+import { FavoriteService } from '../../services/favorite.service';
+import { ShoppingCartService } from '../../services/shopping-cart.service';
 
 @Component({
   selector: 'app-list-product',
@@ -11,9 +13,15 @@ import { combineLatest, Subject, takeUntil } from 'rxjs';
 export class ListProductComponent implements OnInit, OnDestroy {
   public products: Product[] = [];
   public myFavorites: Product[] = [];
+  public shoppingItems: Product[] = [];
   private destroy$ = new Subject<void>();
 
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(
+    private productService: ProductService,
+    private router: Router,
+    private favoriteService: FavoriteService,
+    private shoppingService: ShoppingCartService
+  ) {}
 
   ngOnInit(): void {
     this.initializeProducts();
@@ -32,15 +40,28 @@ export class ListProductComponent implements OnInit, OnDestroy {
       isFavorite: favorites.some((fav) => fav.id === product.id),
     }));
   }
+  private syncProductWithShopping(
+    product: Product[],
+    shoppingItems: Product[]
+  ): Product[] {
+    return product.map((product) => ({
+      ...product,
+      isShopping: shoppingItems.some((item) => item.id === product.id),
+    }));
+  }
+  
   private initializeProducts(): void {
     combineLatest([
       this.productService.getProducts(),
-      this.productService.getFavorites(),
+      this.favoriteService.getFavorites(),
+      this.shoppingService.getShoppingItems()
     ])
       .pipe(takeUntil(this.destroy$))
-      .subscribe(([products, favorites]) => {
+      .subscribe(([products, favorites, shoppingItems]) => {
+        const productsWithFavorites = this.syncProductsWithFavorites(products, favorites);
+        this.products = this.syncProductWithShopping(productsWithFavorites, shoppingItems);
         this.myFavorites = favorites;
-        this.products = this.syncProductsWithFavorites(products, favorites);
+        this.shoppingItems = shoppingItems;
       });
   }
 
@@ -48,9 +69,17 @@ export class ListProductComponent implements OnInit, OnDestroy {
     product.isFavorite = !product.isFavorite;
 
     if (product.isFavorite) {
-      this.productService.addFavorites(product);
+      this.favoriteService.addFavorites(product);
     } else {
-      this.productService.removeFavorite(product);
+      this.favoriteService.removeFavorite(product);
+    }
+  }
+  onShopping(product: Product): void {
+    product.isShopping = !product.isShopping;
+    if (product.isShopping) {
+      this.shoppingService.addShoppingItems(product);
+    } else {
+      this.shoppingService.removeShoppingItems(product);
     }
   }
 }
