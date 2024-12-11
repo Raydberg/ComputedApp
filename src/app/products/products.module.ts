@@ -9,6 +9,9 @@ import { NewProductComponent } from './pages/new-product/new-product.component';
 import { SharedModule } from '../shared/shared.module';
 import { FavoriteProductComponent } from './pages/favorite-product/favorite-product.component';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ProductImageComponent } from './components/product-image/product-image.component';
+import { ProductComponent } from './pages/product/product.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.compo
     ListProductComponent,
     NewProductComponent,
     FavoriteProductComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    ProductImageComponent,
+    ProductComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +29,7 @@ import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.compo
     RouterModule,
     ProductsRoutingModule,
     SharedModule,
-  ],
+    ReactiveFormsModule
+  ]
 })
 export class ProductsModule {}

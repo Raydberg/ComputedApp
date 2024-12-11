@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { MenuItem } from 'primeng/api';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,7 @@ import { MenuItem } from 'primeng/api';
 })
 export class HomeComponent implements OnInit {
   public cartItemsCount: string = '0';
+  private cartSubscription: Subscription = new Subscription();
   public navBarItems: MenuItem[] = [
     { label: 'Productos', icon: 'pi pi-home', routerLink: 'list-product' },
     { label: 'Nuevo Producto', icon: 'pi pi-star', routerLink: 'new-product' },
@@ -26,22 +28,30 @@ export class HomeComponent implements OnInit {
     },
   ];
   
-  constructor(private shoppingService: ShoppingCartService) {}
+  constructor(
+    private shoppingService: ShoppingCartService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
-    this.shoppingService.getShoppingItems().subscribe((items) => {
-      if (items.length > 0) {
+    this.cartSubscription = this.shoppingService.getShoppingItems()
+      .subscribe((items) => {
         this.cartItemsCount = items.length.toString();
         this.updateShoppingBadge();
-      }
-    });
+        this.cdr.detectChanges();
+      });
+  }
+
+  ngOnDestroy(): void {
+    if (this.cartSubscription) {
+      this.cartSubscription.unsubscribe();
+    }
   }
 
   private updateShoppingBadge(): void {
     const shoppingItem = this.navBarItems.find(item => item.routerLink === 'shopping-cart');
     if (shoppingItem) {
       shoppingItem.badge = this.cartItemsCount;
-      shoppingItem.badgeStyleClass = 'p-badge-danger';
     }
   }
 }

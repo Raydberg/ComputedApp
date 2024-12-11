@@ -1,1 +1,60 @@
-<p>new-product works!</p>,
+<div class="card p-4">
+  <h2 class="text-2xl mb-4">Nuevo Producto</h2>
+  
+  <form [formGroup]="productForm" class="flex flex-column gap-4" (ngSubmit)="onSubmit()">
+    
+    <div class="field">
+      <p-floatLabel>
+        <input 
+          id="name" 
+          type="text" 
+          pInputText 
+          formControlName="name">
+        <label for="name">Nombre del producto</label>
+      </p-floatLabel>
+      <small class="text-red-500" *ngIf="productForm.get('name')?.errors?.['required'] && productForm.get('name')?.touched">
+        El nombre es requerido
+      </small>
+    </div>
+
+    <div class="field">
+      <p-floatLabel>
+        <p-inputNumber 
+          id="price" 
+          formControlName="price"
+          mode="currency" 
+          currency="USD">
+        </p-inputNumber>
+        <label for="price">Precio</label>
+      </p-floatLabel>
+      <small class="text-red-500" *ngIf="productForm.get('price')?.errors?.['required'] && productForm.get('price')?.touched">
+        El precio es requerido
+      </small>
+    </div>
+
+    <div class="field">
+      <p-floatLabel>
+        <textarea 
+          id="description" 
+          rows="4" 
+          pInputTextarea 
+          formControlName="description">
+        </textarea>
+        <label for="description">Descripción</label>
+      </p-floatLabel>
+      <small class="text-red-500" *ngIf="productForm.get('description')?.errors?.['required'] && productForm.get('description')?.touched">
+        La descripción es requerida
+      </small>
+    </div>
+
+    <div class="flex justify-content-end">
+      <p-button 
+        type="submit"
+        label="Guardar" 
+        icon="pi pi-save"
+        [disabled]="!productForm.valid">
+      </p-button>
+    </div>
+
+  </form>
+</div>

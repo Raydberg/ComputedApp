@@ -10,12 +10,7 @@
           class="relative"
           style="height: 200px; border: 2px solid #ccc; border-radius: 8px"
         >
-          <img
-            class="w-full h-full transform-none transition-all transition-duration-300 hover:scale-110"
-            [src]="item.image"
-            [alt]="item.name"
-            style="object-fit: cover; border-radius: 8px"
-          />
+          <app-product-image [product]="item" />
         </div>
 
         <div class="flex flex-column flex-grow-1">

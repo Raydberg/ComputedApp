@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductStartComponent {
   @Input()
-  public rating: number = 0;
+  public rating?: number = 0;
 }
